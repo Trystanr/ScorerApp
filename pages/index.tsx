@@ -48,7 +48,7 @@ const Home: NextPage = () => {
   const [playerOneScore, setPlayerOneScore] = useState(0);
 
   const refAnimationInstance = useRef(null);
-  const [intervalId, setIntervalId] = useState();
+  const [intervalId, setIntervalId] = useState<any>();
 
   const getInstance = useCallback((instance) => {
     refAnimationInstance.current = instance;
@@ -84,8 +84,8 @@ const Home: NextPage = () => {
     };
   }, [intervalId]);
 
-  const playerOneRef = useRef();
-  const playerTwoRef = useRef();
+  const playerOneRef = useRef<any>();
+  const playerTwoRef = useRef<any>();
 
   return (
     <div className="w-screen h-screen flex items-stretch justify-items-stretch bg-black">
